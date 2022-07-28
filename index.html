@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- <link rel="stylesheet" href="css/slider.css"> -->
 <title>Title + Graph</title>
 </head>
 <body>
+<table>
+<tr><td><p>select x.</p></td><td><input type="range" min="1" max="100" value="50" class="xslider" id="xRange"></td><td><p>Value: <span id="x"></span></p> </td><td><input type="number"></td></tr>
+<tr><td><p>select y.</p></td><td><input type="range" min="1" max="10" value="5" class="yslider" id="yRange"></td><td><p>Value: <span id="y"></span></p></td><td><input type="number" value="5" id="yval"></td></tr>
+</table>
 
-<p>select x.</p>
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-  <p>Value: <span id="demo"></span></p>
+  
+  
+  
+  
 
 
 <script>
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
+var xslider = document.getElementById("xRange");
+var x = document.getElementById("x");
+x.innerHTML = xslider.value;
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
+xslider.oninput = function() {
+  x.innerHTML = this.value;
+}
+
+var yslider = document.getElementById("yRange");
+var y = document.getElementById("y");
+y.innerHTML = yslider.value;
+
+yslider.oninput = function() {
+  y.innerHTML = this.value;
 }
 </script>
 
